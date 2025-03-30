@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+  }
+
+  #container{
+     height: 100%;
+    margin:50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .box{
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border: solid black 1px;
+  }
+  
