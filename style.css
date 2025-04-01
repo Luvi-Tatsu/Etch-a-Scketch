@@ -29,3 +29,12 @@ body {
     border: solid black 1px;
 
   }
+
+
+  .box{
+    transition: .03s;
+  }
+.box:hover{
+  background-color: orange;
+  color:white;
+}
