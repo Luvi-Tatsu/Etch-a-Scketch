@@ -23,18 +23,9 @@ body {
     justify-content: center;
   }
 
-  .box{
-    /*flex-basis is 100 / 17  (17 is equal to grid amount +1)*/
-    flex-basis: 5.88%;
-    border: solid black 1px;
 
-  }
-
-
-  .box{
-    transition: .03s;
-  }
-.box:hover{
-  background-color: orange;
-  color:white;
+.box{
+  display: flex;
+  border: 1px solid black;
+  flex-basis: 5.88%;
 }
