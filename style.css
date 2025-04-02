@@ -27,5 +27,5 @@ body {
 .box{
   display: flex;
   border: 1px solid black;
-  flex-basis: 5.88%;
+  /* flex-basis: 5.88%; */
 }
