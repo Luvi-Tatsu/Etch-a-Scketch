@@ -45,7 +45,7 @@ const buttonClear = document.createElement("button");
       }
        else {container.innerHTML = '';}
        if(container.innerHTML === ''){
-            for (let x = 0; x < newSize * newSize + newSize; x++){
+            for (let x = 0; x < newSize * newSize ; x++){
                   let size = newSize +1;
                   let initial = 100;
                   let box = document.createElement("div");
