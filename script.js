@@ -24,12 +24,10 @@ const buttonClear = document.createElement("button");
         box.style.height = `${flexBasisH}px `;
         box.style.width = `${flexBasis}px `;         
         box.addEventListener('mouseover', function(){
-        box.style.backgroundColor = 'black';});
+        box.style.backgroundColor = `${randomColor()}`;});
         buttonClear.addEventListener('click',function(){
         box.style.backgroundColor = 'white';});
     }
-console.log(container.offsetWidth);
-console.log(container.offsetHeight);
     function createBox(){
         
     }
@@ -56,9 +54,18 @@ console.log(container.offsetHeight);
                   box.style.width = `${flexBasis}px `; 
                   container.appendChild(box);         
                   box.addEventListener('mouseover', function(){
-                  box.style.backgroundColor = 'black';});
+                  box.style.backgroundColor = `${randomColor()}`;});
                   buttonClear.addEventListener('click',function(){
                   box.style.backgroundColor = 'white';});
     }
               }
        })
+
+       function randomColor(){
+            function c(){
+                  let hex = Math.floor(Math.random()*256).toString(16);
+                  return ("0"+String(hex)).substr(-2);
+            }
+            return "#"+c()+c()+c();
+       }
+       
