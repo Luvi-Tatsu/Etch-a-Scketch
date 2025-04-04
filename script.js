@@ -15,6 +15,8 @@ const buttonClear = document.createElement("button");
       buttonClear.textContent = "Clear";
       header.appendChild(buttonClear);
 
+     
+
     for (let x = 0; x < 256; x++){
         let box = document.createElement("div");
         let flexBasis = container.offsetWidth / 16;
@@ -22,11 +24,17 @@ const buttonClear = document.createElement("button");
         box.classList.add("box");
         container.appendChild(box); 
         box.style.height = `${flexBasisH}px `;
-        box.style.width = `${flexBasis}px `;         
+        box.style.width = `${flexBasis}px `;
+        box.style.backgroundColor = 'white'; 
+        box.style.opacity =.1;        
         box.addEventListener('mouseover', function(){
-        box.style.backgroundColor = `${randomColor()}`;});
+        if (box.style.backgroundColor == "white"){    
+        box.style.backgroundColor = `${randomColor()}`;}
+        if (box.style.opacity <= 1){
+            box.style.opacity = +box.style.opacity + 0.1;}});
         buttonClear.addEventListener('click',function(){
-        box.style.backgroundColor = 'white';});
+        box.style.backgroundColor = 'white';
+        box.style.opacity =.1});
     }
     function createBox(){
         
@@ -53,10 +61,16 @@ const buttonClear = document.createElement("button");
                   box.style.height = `${flexBasisH}px `;
                   box.style.width = `${flexBasis}px `; 
                   container.appendChild(box);         
+                  box.style.backgroundColor = 'white'; 
+                  box.style.opacity =.1;        
                   box.addEventListener('mouseover', function(){
-                  box.style.backgroundColor = `${randomColor()}`;});
+                  if (box.style.backgroundColor == "white"){    
+                  box.style.backgroundColor = `${randomColor()}`;}
+                  if (box.style.opacity <= 1){
+                      box.style.opacity = +box.style.opacity + 0.1;}});
                   buttonClear.addEventListener('click',function(){
-                  box.style.backgroundColor = 'white';});
+                  box.style.backgroundColor = 'white';
+                  box.style.opacity =.1});
     }
               }
        })
@@ -69,3 +83,5 @@ const buttonClear = document.createElement("button");
             return "#"+c()+c()+c();
        }
        
+       
+ 
