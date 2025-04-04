@@ -16,21 +16,22 @@ const buttonClear = document.createElement("button");
       header.appendChild(buttonClear);
 
     for (let x = 0; x < 256; x++){
-        createBox();
-    }
-
-    function createBox(){
-        let init = 17;
-        let sizer = 100;
         let box = document.createElement("div");
-        let flexBasis = sizer / init;
+        let flexBasis = container.offsetWidth / 16;
+        let flexBasisH = container.offsetHeight / 16;
         box.classList.add("box");
         container.appendChild(box); 
-        box.style.flexBasis = `${flexBasis}% `;        
+        box.style.height = `${flexBasisH}px `;
+        box.style.width = `${flexBasis}px `;         
         box.addEventListener('mouseover', function(){
         box.style.backgroundColor = 'black';});
         buttonClear.addEventListener('click',function(){
         box.style.backgroundColor = 'white';});
+    }
+console.log(container.offsetWidth);
+console.log(container.offsetHeight);
+    function createBox(){
+        
     }
 
     button.addEventListener('click', function(){
@@ -46,12 +47,13 @@ const buttonClear = document.createElement("button");
        else {container.innerHTML = '';}
        if(container.innerHTML === ''){
             for (let x = 0; x < newSize * newSize ; x++){
-                  let size = newSize +1;
-                  let initial = 100;
+                  // let size = newSize +1;
                   let box = document.createElement("div");
-                  let boxSize = initial/size;
+                  let flexBasis = container.offsetWidth / newSize;
+                  let flexBasisH = container.offsetHeight / newSize;
                   box.classList.add("box");
-                  box.style.flexBasis = `${boxSize}%`;
+                  box.style.height = `${flexBasisH}px `;
+                  box.style.width = `${flexBasis}px `; 
                   container.appendChild(box);         
                   box.addEventListener('mouseover', function(){
                   box.style.backgroundColor = 'black';});

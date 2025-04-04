@@ -1,13 +1,12 @@
-*{margin:0;}
+*{margin:0;padding:0;}
 
 body {
     font-family: Roboto, sans-serif;
-    height: 100vh;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2%;
+    align-items:center;
+    
+
   }
   #header{
     display: flex;
@@ -16,16 +15,16 @@ body {
     margin: 20px;
   }
   #container {
-    height: 100vh;
-    width: 100vh;
+    height:700px;
+    width: 700px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items:center;
   }
 
 
 .box{
-  display: flex;
-  border: 1px solid black;
+  outline: 1px solid black;
   /* flex-basis: 5.88%; */
 }
